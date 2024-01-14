@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('images/try.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.card{
+  height: 100px;
+  width: 400px;
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px) ;
+  border: 2px solid rgb(126, 107, 235);
+  /* border: 2px solid rgb(54, 41, 128); */
+  transition: height .5s ease;
+}
+
+.search-box{
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+#icon{
+  position: absolute;
+  font-size: 24px;
+  margin-left: 15px;
+  color: white;
+}
+
+input{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  /* border: 2px solid rgb(54, 41, 128); */
+  border-radius: 10px;
+  text-transform: capitalize;
+  color:white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 45px;
+} 
+
+input::placeholder{
+  color: rgba(255, 255, 255, 0.685);
+  text-transform:uppercase;
+} 
+
+button{
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  width: 45px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: rgb(234, 236, 236);
+  padding: 5px 5px 0px 0px;
+}
+
+.weather-box{
+  text-align: center;
+  color: rgb(234, 236, 236);
+  margin-top: 25px;
+}
+.weather-box img{
+  width: 60%;
+}
+
+.weather-box .temperature{
+  font-size: 60px;
+  font-weight: 600;
+  margin-left: -18px;
+  margin-top: 10px;
+  line-height: 1;
+}
+.weather-box .temperature span{
+  position: absolute;
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+.weather-box .desc{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.detail .box{
+  color: white;
+  display: flex;
+  justify-content:space-around;
+  margin-top: 45px;
+}
+.humidity,
+.wind{
+  display: flex;
+}
+.humidity i,
+.wind i{
+  font-size: 60px;
+  margin-right: 10px;
+}
+.humidity .value,
+.wind .value{
+  font-size: 20px;
+  font-weight:500;
+}
+
+.humidity .name,
+.wind .name{
+  font-size:13px;
+}
+
+.weather-box,
+.detail,
+.not-found{
+  overflow: hidden;
+  visibility: hidden;
+}
+.weather-box.active,
+.detail.active,
+.not-found.active{
+  visibility: visible;
+}
+
+.weather-box .box,
+.detail .box,
+.not-found .box{ 
+  transform: translateY(-200%);
+}
+.weather-box.active .box,
+.detail.active .box,
+.not-found.active .box{
+  transform: translateY(0%);
+  transition: transform 1s ease;
+  transition-delay: .5s;
+  visibility: visible;
+}
+
+
+.not-found{
+  position: absolute;
+  top: 100px;
+  left: 3px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+.not-found img{
+  width: 75%;
+}
+
+@media (max-width:500px) {
+  .card{
+    width: 280px;
+  }
+  input{
+    font-size: 15px;
+  }
+  .weather-box .temperature{
+    font-size: 50px;
+    font-weight: 600;
+  }
+  .weather-box .temperature span{
+    font-size: 18px;
+  }
+  .weather-box .desc{
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .detail .box{
+    height: 150px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+    justify-content: space-evenly;
+  }
+  .humidity i,
+  .wind i{
+    font-size: 40px;
+    margin-right: 10px;
+  }
+  .humidity .value,
+  .wind .value{
+    font-size: 17px;
+    font-weight:400;
+  }
+  
+  .humidity .name,
+  .wind .name{
+    font-size:13px;
+  }
+
+  .not-found{
+    top: 150px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+  }
+  .not-found img{
+    width: 70%;
+  }
+}
+

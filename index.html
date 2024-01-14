@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Mushahid Khisal Ansari</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="card">
+        <div class="search-box">
+            <i class='bx bxs-map' id="icon"></i>
+            <input type="text" placeholder="Enter city name">
+            <button><i class='bx bx-search-alt-2' ></i></button>
+        </div>
+
+        <div class="weather-box">
+            <div class="box">
+                <img class="photu" src="/images/cloud.png">
+                <p class="temperature">17 <span>°C</span></p>
+                <p class="desc">Broken clouds</p>
+            </div>
+        </div>
+
+        <div class="detail">
+            <div class="box">
+                <div class="humidity">
+                    <i class='bx bx-water' ></i>
+                    <div class="text">
+                        <p class="value">0%</p>
+                        <p class="name">Humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <i class='bx bx-wind' ></i>
+                    <div class="text">
+                        <p class="value">0Km/h</p>
+                        <p class="name">Wind Speed</p>
+                    </div>              
+                </div>
+            </div>
+        </div>
+
+        <div class="not-found">
+            <div class="box">
+                <img src="/images/404.png" alt="">
+                <div class="p">Oops! Location not found!</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
